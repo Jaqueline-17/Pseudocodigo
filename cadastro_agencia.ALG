@@ -3,21 +3,21 @@ Algoritmo "Cadastor linhas Aéreas"
 // Professor   : Antonio Carlos Nicolodi 
 
 Var
-nm, sm, dn, cd, dc: vetor [1..5] de caracter // variáveis de cad de cliente
-nd, pa, dt, hs, hc, tr: vetor [1..5] de caracter //variáveis de cad de destino
+nm, sm, dn, cd, dc, hp: vetor [1..10] de caracter // variáveis de cad de cliente
+nd, pa, dt, hs, hc, tr: vetor [1..10] de caracter //variáveis de cad de destino
 i, j, esc: inteiro  //seletor e contadores
 dec: caracter //seletor de decisão
 
 Inicio
 escreval("----------------------------------")
-escreval("Sistema de Cad Trip Linhas Aéreas")
+escreval("Sistema de CAD Trip Linhas Aéreas")
 escreval("----------------------------------")
-escreval("O que deseja cadastrar? [1]-Cliente [2]-Destino")
+escreval("O que deseja cadastrar? [1]-Cliente [2]-Destino:")
 leia(esc)
 
 escolha(esc)
 caso 1
-     escreval("Quantos Clientes deseja cadastrar? Max(5):")
+     escreval("Quantos Clientes deseja cadastrar? Max(10):")
      leia(j)
 
      para i <- 1 ate j faca
@@ -34,6 +34,8 @@ caso 1
           leia(cd[i])
           escreval("Destino: ")
           leia(dc[i])
+          escreval("Hospedagem incluso? [s] [N]")
+          leia(hp[i])
           limpatela
      fimpara
 
@@ -49,6 +51,7 @@ caso 1
              escreval(dn[i])
              escreval(cd[i])
              escreval(dc[i])
+             escreval(hp[i])
             fimpara
             escreval("Fim do Cadastro")
           fimse
@@ -68,7 +71,7 @@ caso 2
           escreval("---------")
           escreval("Destino ",i)
           escreval("---------")
-          escreval("Nº do : ")
+          escreval("Nº de ID: ")
           leia(nd[i])
           escreval("Partida de: ")
           leia(pa[i])
