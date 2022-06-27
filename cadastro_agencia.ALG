@@ -10,7 +10,7 @@ dec: caracter //seletor de decisão
 
 Inicio
 escreval("----------------------------------")
-escreval("Sistema de CAD Trip Linhas Aéreas")
+escreval("Sistema de CAD Bússola Tour")
 escreval("----------------------------------")
 escreval("O que deseja cadastrar? [1]-Cliente [2]-Destino:")
 leia(esc)
@@ -34,7 +34,7 @@ caso 1
           leia(cd[i])
           escreval("Destino: ")
           leia(dc[i])
-          escreval("Hospedagem incluso? [s] [N]")
+          escreval("Hospedagem incluso? [S] [N]")
           leia(hp[i])
           limpatela
      fimpara
@@ -47,11 +47,11 @@ caso 1
              escreval("---------")
              escreval("Cliente ",i)
              escreval("---------")
-             escreval(nm[i]," ",sm[i])
-             escreval(dn[i])
-             escreval(cd[i])
-             escreval(dc[i])
-             escreval(hp[i])
+             escreval("Nome: ",nm[i]," ",sm[i])
+             escreval("Data de Nascimento: ",dn[i])
+             escreval("Cidade: ",cd[i])
+             escreval("Destino: ",dc[i])
+             escreval("Hospedagem: ",hp[i])
             fimpara
             escreval("Fim do Cadastro")
           fimse
@@ -65,7 +65,7 @@ caso 1
 
 
 caso 2
-     escreval("Quantos Destinos deseja cadastrar? Max(5):")
+     escreval("Quantos Destinos deseja cadastrar? Max(10):")
      leia(j)
       para i <- 1 ate j faca
           escreval("---------")
@@ -94,12 +94,12 @@ caso 2
              escreval("---------")
              escreval("Destino ",i)
              escreval("---------")
-             escreval("Nº ",nd[i])
+             escreval("Nº: ",nd[i])
              escreval("De: ",pa[i])
              escreval("Para: ",dt[i])
              escreval("Saída às: ",hs[i])
              escreval("Chegada às: ",hc[i])
-             escreval("Meio de Transporte : ",tr[i])
+             escreval("Meio de Transporte: ",tr[i])
             fimpara
             escreval("Fim do Cadastro")
           fimse
@@ -109,9 +109,6 @@ caso 2
             escreva("Fim do Cadastro")
           fimse
 
-caso >= 3
-
-escreva("Opção Inválida, Tente novamente")
      
 fimescolha
              
