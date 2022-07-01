@@ -6,14 +6,17 @@ Var
 nm, sm, dn, cd, dc, hp: vetor [1..10] de caracter // variáveis de cad de cliente
 nd, pa, dt, hs, hc, tr: vetor [1..10] de caracter //variáveis de cad de destino
 i, j, esc: inteiro  //seletor e contadores
-dec: caracter //seletor de decisão
+dec, cont: caracter //seletor de decisão
 
 Inicio
-escreval("----------------------------------")
-escreval("Sistema de CAD Bússola Tour")
-escreval("----------------------------------")
-escreval("O que deseja cadastrar? [1]-Cliente [2]-Destino:")
-leia(esc)
+
+repita
+
+  escreval("----------------------------------")
+  escreval("Sistema de CAD Bússola Tour")
+  escreval("----------------------------------")
+  escreval("O que deseja cadastrar? [1]-Cliente [2]-Destino:")
+  leia(esc)
 
 escolha(esc)
 caso 1
@@ -44,25 +47,25 @@ caso 1
 
           se dec = "S" entao
             para i <- 1 ate j faca
-             escreval("---------")
-             escreval("Cliente ",i)
-             escreval("---------")
-             escreval("Nome: ",nm[i]," ",sm[i])
-             escreval("Data de Nascimento: ",dn[i])
-             escreval("Cidade: ",cd[i])
-             escreval("Destino: ",dc[i])
-             escreval("Hospedagem: ",hp[i])
+              escreval("---------")
+              escreval("Cliente ",i)
+              escreval("---------")
+              escreval("Nome: ",nm[i]," ",sm[i])
+              escreval("Data de Nascimento: ",dn[i])
+              escreval("Cidade: ",cd[i])
+              escreval("Destino: ",dc[i])
+              escreval("Hospedagem: ",hp[i])
             fimpara
+
             escreval("Fim do Cadastro")
+            escreval
           fimse
 
           
           se dec = "N" entao
-            escreva("Fim do Cadastro")
+             escreval("Fim do Cadastro")
+             escreval
           fimse
-
-
-
 
 caso 2
      escreval("Quantos Destinos deseja cadastrar? Max(10):")
@@ -91,26 +94,33 @@ caso 2
           
           se dec = "S" entao
             para i <- 1 ate j faca
-             escreval("---------")
-             escreval("Destino ",i)
-             escreval("---------")
-             escreval("Nº: ",nd[i])
-             escreval("De: ",pa[i])
-             escreval("Para: ",dt[i])
-             escreval("Saída às: ",hs[i])
-             escreval("Chegada às: ",hc[i])
-             escreval("Meio de Transporte: ",tr[i])
+              escreval("---------")
+              escreval("Destino ",i)
+              escreval("---------")
+              escreval("Nº: ",nd[i])
+              escreval("De: ",pa[i])
+              escreval("Para: ",dt[i])
+              escreval("Saída às: ",hs[i])
+              escreval("Chegada às: ",hc[i])
+              escreval("Meio de Transporte: ",tr[i])
             fimpara
+
             escreval("Fim do Cadastro")
+            escreval
           fimse
 
 
           se dec = "N" entao
-            escreva("Fim do Cadastro")
+            escreval("Fim do Cadastro")
+            escreval
           fimse
-
-     
 fimescolha
-             
+
+escreval("Deseja voltar ao Menu? [S] [N]")
+leia(cont)
+limpatela
+
+ate cont = "N"
+
              
 Fimalgoritmo
